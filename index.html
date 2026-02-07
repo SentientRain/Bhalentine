@@ -229,9 +229,10 @@
 <body>
     <div class="music-control" onclick="toggleMusic()">🎵 <span id="musicStatus">Touch me😉😉.... To Play City of Stars</span></div>
     
-    <audio id="bgMusic" loop preload="auto">
-        <source src="music.mp3.mp3.mp3" type="audio/mpeg">
-    </audio>
+    <audio id="bgMusic" loop preload="auto" crossorigin="anonymous">
+    <source src="./music.mp3" type="audio/mpeg">
+</audio>
+
     
     <h1>Will you be my valentine?</h1>
     <img src="img1.gif" alt="Dancing bear" class="bear" />
@@ -390,5 +391,6 @@ document.addEventListener('click', () => {
     </script>
 </body>
 </html>
+
 
 
