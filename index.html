@@ -350,7 +350,15 @@
         }
         
         function yesClick() {
-            createHearts(); // Hearts loop forever
+    // ▶️ PLAY MUSIC IF NOT ALREADY PLAYING
+    if (!isPlaying) {
+        music.play().catch(() => {});
+        musicStatus.textContent = 'Pause';
+        isPlaying = true;
+    }
+
+    createHearts(); // Hearts loop forever
+
             
             // 1. YAYYYYYY (1.5s)
             yayMessage.classList.add('show');
@@ -373,3 +381,4 @@
     </script>
 </body>
 </html>
+
