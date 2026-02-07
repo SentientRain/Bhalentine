@@ -250,6 +250,15 @@
     
     <script>
         const music = document.getElementById('bgMusic');
+        // 🔓 Unlock audio on first user interaction (required by browsers)
+document.addEventListener('click', () => {
+    if (!isPlaying) {
+        music.play().then(() => {
+            music.pause(); // unlock only
+        }).catch(() => {});
+    }
+}, { once: true });
+
         const musicStatus = document.getElementById('musicStatus');
         const noButton = document.getElementById('noButton');
         const noWarning = document.getElementById('noWarning');
@@ -381,4 +390,5 @@
     </script>
 </body>
 </html>
+
 
